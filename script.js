@@ -87,20 +87,16 @@ form.addEventListener("submit", async e => {
 
     const inv = Math.floor(Math.random() * 100) + 1;
 
-    const FIXED_AMOUNT = parseFloat(
-        g("amount").replace(/,/g, "")
-    );
+    const totalAmount = parseFloat(
+    g("amount").replace(/,/g, "")
+);
 
-    const quantity = parseInt(
-        g("quantity"),
-        10
-    );
+const quantity = parseInt(
+    g("quantity"),
+    10
+);
 
-    const totalAmount = FIXED_AMOUNT * quantity;
-
-    const amt = FIXED_AMOUNT.toLocaleString("en-IN");
-
-    const totalAmt = totalAmount.toLocaleString("en-IN");
+const totalAmt = totalAmount.toLocaleString("en-IN");
 
 
     document.getElementById("invoiceNumber").textContent = inv;
